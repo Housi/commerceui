@@ -1,0 +1,40 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4033373, 2021-03-30T13:10:47-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: DINCondensed-Light by ParaType
+ * URL: https://www.myfonts.com/fonts/paratype/din-condensed/light-40316/
+ *
+ * Webfont: DINCondensed-Regular by ParaType
+ * URL: https://www.myfonts.com/fonts/paratype/din-condensed/pt-din-condensed-40316/
+ *
+ *
+ * Webfonts copyright: Copyright &amp;#x00A9; 1998 ParaType Inc., ParaType Ltd. All rights reserved.
+ *
+ * © 2021 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3d8b5d");
+
+@font-face {
+    font-family: "DINCondensed";
+    src: url('DINCondensedRegular/font.woff2') format('woff2'), url('DINCondensedRegular/font.woff') format('woff');
+    font-display:block;
+    font-style:normal;
+    font-weight:400;
+}
+@font-face {
+    font-family: "DINCondensed";
+    src: url('DINCondensedLight/font.woff2') format('woff2'), url('DINCondensedLight/font.woff') format('woff');
+    font-display:block;
+    font-style:normal;
+    font-weight:300;
+}

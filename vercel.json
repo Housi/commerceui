@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "access-control-allow-origin",
+          "value": "https://revlifter-js.s3-eu-west-1.amazonaws.com/ https://d2236hi0n02pja.cloudfront.net/1b36f6d6-438e-4525-9693-177c6f95ad4f.js https://revlifter-js.s3-eu-west-1.amazonaws.com https://splits59.official-coupons.com https://cp.official-deals.co.uk https://cp.official-coupons.com https://devt.revlifter.com"
+        }
+      ]
+    }
+  ]
+}

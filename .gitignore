@@ -1,0 +1,6 @@
+.next
+.vercel
+.env
+node_modules
+.now
+.idea

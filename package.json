@@ -1,0 +1,57 @@
+{
+  "name": "splits59-storefront",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/ratio-team/splits59-storefront.git"
+  },
+  "scripts": {
+    "dev": "rm -rf ./node_modules/.cache/babel-loader && IS_BUILD=false && next",
+    "build": "rm -rf ./node_modules/.cache/babel-loader && export IS_BUILD=true && next build",
+    "start": "rm -rf ./node_modules/.cache/babel-loader && export IS_BUILD=false && next start",
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
+  },
+      "author": "ratio.team",
+  "license": "ISC",
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.3",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.3.0",
+    "@imgix/js-core": "^3.1.3",
+    "algoliasearch": "^4.8.6",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link-context": "^1.0.20",
+    "apollo-link-http": "^1.5.17",
+    "contentful": "^8.2.1",
+    "graphql": "^15.5.0",
+    "graphql-tag": "^2.11.0",
+    "hls.js": "^1.0.4",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^11.0.1",
+    "next-seo": "^4.23.0",
+    "prismic-dom": "^2.2.5",
+    "prismic-javascript": "^3.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-fast-marquee": "^1.1.2",
+    "react-ga": "^3.3.0",
+    "react-modal": "^3.12.1",
+    "react-uid": "^2.3.1",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-graphql-tag": "^3.2.0",
+    "eslint": "^7.30.0",
+    "eslint-config-next": "^11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "jest": "^27.0.0",
+    "next-sitemap": "^1.6.102",
+    "prettier": "^2.3.2"
+  }
+}
