@@ -43,7 +43,7 @@ export async function getStaticPaths() {
     paths = entries.map((entry) => ({ params: { handle: entry.slug } }))
   }
 
-  return { paths, fallback: true }
+  return { paths: [] /* modification only for the purpose of 413 task */ , fallback: true }
 }
 
 export async function getStaticProps({ params, preview = false, previewData = null }) {

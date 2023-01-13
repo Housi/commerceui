@@ -48,7 +48,7 @@ export async function getStaticPaths() {
     paths = fabrics.map((fabric) => ({ params: { handle: fabric.slug } }))
   }
 
-  return { paths, fallback: true }
+  return { paths: [] /* modification only for the purpose of 413 task */ , fallback: true }
 }
 
 export async function getStaticProps({ params }) {
