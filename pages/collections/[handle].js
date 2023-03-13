@@ -11,10 +11,11 @@ import { useAnalytics } from '@/hooks/Analytics'
 
 function Page(props) {
   const Analytics = useAnalytics()
+  const { filters, collection, pagination } = filterCollection(props.fullCollection, props.filterValues)
   useEffect(() => {
     Analytics.pageView()
   }, [])
-  return <Collection {...props} key={props.collection.handle} />
+  return <Collection {...{ ...props, filters, collection, pagination }} key={collection.handle} />
 }
 
 export async function getStaticPaths() {
@@ -23,10 +24,8 @@ export async function getStaticPaths() {
     const handles = await fetchAllCollectionHandles()
     paths = handles.map((h) => ({ params: h }))
   }
-  return { paths: [] /* modification only for the purpose of 413 task */ , fallback: true }
+  return { paths: [] /* modification only for the purpose of 413 task */, fallback: true }
 }
-
-
 
 export async function getStaticProps({ params, preview = false, previewData = null }) {
   const { handle, values } = decomposeCollectionHandle(params.handle)
@@ -50,26 +49,23 @@ export async function getStaticProps({ params, preview = false, previewData = nu
       notFound: true
     }
   }
-  const { filters, collection, pagination } = filterCollection(fullCollection, values)
 
   const analyticsParams = {
     pageType: 'category',
     pageTitle: fullCollection.title + ' | ' + globalSettings?.pageTitleSuffix,
-    collection: collection.title,
+    collection: fullCollection.title, // afaik this was copied from fullCollection anyway
     ecomm_pagetype: 'category'
   }
 
   return {
     props: {
       globalSettings,
-      collection,
-      filters,
-      pagination,
       fullCollection,
       editorialCollection,
       preview,
       previewData,
-      analyticsParams
+      analyticsParams,
+      filterValues: values
     },
     revalidate: 10
   }
